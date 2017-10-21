@@ -61,13 +61,24 @@ def processRequest(req):
     store_category = soup.select('span.category')
     store_tel = soup.select('div.txt')
     store_addr = soup.select('span.addr')
-
+    speech = "Store Name: " + store_name[0].text + \
+             "Store Category: " + store_category[0].text + \
+             "Store tel: " + store_tel[0].text + \
+             "Store address1: " + store_addr[0].text + \
+             "Store address2: " + store_addr[1].text
     res = {
-        "store_name": store_name[0].text,
-        "store_category": store_category[0].text,
-        "store_tel": store_tel[0].text,
-        "store_addr": store_addr[0].text,
-        "store_addr1": store_addr[1].text
+
+        "speech": speech,
+        "displayText": speech,
+        # "data": data,
+        # "contextOut": [],
+        "source": "HCI-MID"
+
+        # "store_name": store_name[0].text,
+        # "store_category": store_category[0].text,
+        # "store_tel": store_tel[0].text,
+        # "store_addr": store_addr[0].text,
+        # "store_addr1": store_addr[1].text
     }
     return res
 
