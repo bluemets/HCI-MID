@@ -62,10 +62,10 @@ def processRequest(req):
     store_tel = soup.select('div.txt')
     store_addr = soup.select('span.addr')
     speech = "Store Name: " + store_name[0].text + \
-             "Store Category: " + store_category[0].text + \
-             "Store tel: " + store_tel[0].text + \
-             "Store address1: " + store_addr[0].text + \
-             "Store address2: " + store_addr[1].text
+             "\nStore Category: " + store_category[0].text + \
+             "\nStore tel: " + store_tel[0].text + \
+             "\nStore address1: " + store_addr[0].text + \
+             "\nStore address2: " + store_addr[1].text
     res = {
 
         "speech": speech,
