@@ -73,12 +73,6 @@ def processRequest(req):
         # "data": data,
         # "contextOut": [],
         "source": "HCI-MID"
-
-        # "store_name": store_name[0].text,
-        # "store_category": store_category[0].text,
-        # "store_tel": store_tel[0].text,
-        # "store_addr": store_addr[0].text,
-        # "store_addr1": store_addr[1].text
     }
     return res
 
